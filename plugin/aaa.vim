@@ -5,6 +5,7 @@ let g:loaded_aaa = 1
 
 let s:alternates = []
 call add(s:alternates, [["app/", "spec/"], [".rb", "_spec.rb"]])
+call add(s:alternates, [["lib/", "spec/lib/"], [".rb", "_spec.rb"]])
 call add(s:alternates, [[".feature", "_steps.rb"], ["features/", "features/step_definitions/"]])
 call add(s:alternates, [[".go", "_test.go"]])
 
