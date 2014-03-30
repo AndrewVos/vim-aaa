@@ -3,9 +3,10 @@
 Author:  Andrew Vos <http://andrewvos.com/>
 
 ==============================================================================
-CONTENTS                                                          *aaa-contents*
+CONTENTS                                                        *aaa-contents*
 
-    1.General Commands...................................|aaaCommands|
+    1.General Commands...........|aaaCommands|
+    2.Usage......................|aaaUsage|
 ==============================================================================
 
 
@@ -15,4 +16,12 @@ CONTENTS                                                          *aaa-contents*
 :Alternate <how>                       *:Alternate*
 	Switch to the alternate file. Optionally specify split or vsplit
 	to open in a split.
+==============================================================================
+
+==============================================================================
+2. Usage	   	                                            *aaaUsage*
+
+	Map something to Alternate. For example ":command A :Alternate" will
+	map :A to :Alternate. Add this to your vimrc. If you want a split or
+	vsplit use something like ":command A :Alternate vsplit".
 ==============================================================================
