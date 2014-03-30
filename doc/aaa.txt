@@ -1,0 +1,18 @@
+*aaa.txt* Plugin for switching between alternate files
+
+Author:  Andrew Vos <http://andrewvos.com/>
+
+==============================================================================
+CONTENTS                                                          *aaa-contents*
+
+    1.General Commands...................................|aaaCommands|
+==============================================================================
+
+
+==============================================================================
+1. General Commands	   	                                   *aaaCommands*
+
+:Alternate <how>                       *:Alternate*
+	Switch to the alternate file. Optionally specify split or vsplit
+	to open in a split.
+==============================================================================
