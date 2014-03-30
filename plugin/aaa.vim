@@ -9,7 +9,7 @@ call add(s:alternates, [["lib/", "spec/lib/"], [".rb", "_spec.rb"]])
 call add(s:alternates, [[".feature", "_steps.rb"], ["features/", "features/step_definitions/"]])
 call add(s:alternates, [[".go", "_test.go"]])
 
-function! Alternate()
+function! s:Alternate()
   for alternate in s:alternates
     let a = expand('%')
     let b = expand('%')
@@ -27,4 +27,4 @@ function! Alternate()
   endfor
 endfunction
 
-comm! -nargs=? -bang A call Alternate()
+comm! -nargs=? -bang Alternate call s:Alternate()
