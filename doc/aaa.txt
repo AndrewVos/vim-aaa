@@ -13,9 +13,9 @@ CONTENTS                                                        *aaa-contents*
 ==============================================================================
 1. General Commands	   	                                   *aaaCommands*
 
-:Alternate <how>                       *:Alternate*
+:A <how>                       *:A*
 	Switch to the alternate file. Optionally specify split or vsplit
-	to open in a split.
+	to open in a split. A! will create the file if it doesn't exist.
 ==============================================================================
 
 ==============================================================================

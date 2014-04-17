@@ -9,21 +9,26 @@ call add(s:alternates, [["lib/", "spec/lib/"], [".rb", "_spec.rb"]])
 call add(s:alternates, [[".feature", "_steps.rb"], ["features/", "features/step_definitions/"]])
 call add(s:alternates, [[".go", "_test.go"]])
 
-function! s:Alternate(how)
+function! s:Alternate(how, create)
   for alternate in s:alternates
-    let a = expand('%')
-    let b = expand('%')
+    let current = expand('%')
+    let a = current
+    let b = current
     for replacement in alternate
       let a = substitute(a, replacement[0], replacement[1], "")
       let b = substitute(b, replacement[1], replacement[0], "")
     endfor
-    if a != expand('%') && filereadable(a)
-      call s:OpenFile(a, a:how)
-      return
+    if a != current
+      if filereadable(a) || a:create == 1
+        call s:OpenFile(a, a:how)
+        return
+      endif
     endif
-    if b != expand('%') && filereadable(b)
-      call s:OpenFile(b, a:how)
-      return
+    if b != current
+      if filereadable(b) || a:create == 1
+        call s:OpenFile(b, a:how)
+        return
+      endif
     endif
   endfor
 endfunction
@@ -38,4 +43,4 @@ function! s:OpenFile(file, how)
   endif
 endfunction
 
-command! -nargs=? -bang Alternate call s:Alternate(<q-args>)
+command! -nargs=? -bang A call s:Alternate(<q-args>, <bang>0)
