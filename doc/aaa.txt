@@ -5,21 +5,33 @@ Author:  Andrew Vos <http://andrewvos.com/>
 ==============================================================================
 CONTENTS                                                        *aaa-contents*
 
-    1.General Commands...........|aaaCommands|
-    2.Usage......................|aaaUsage|
+    1.Supported Alternates.......|aaaSupportedAlternates|
+    2.General Commands...........|aaaCommands|
+    3.Usage......................|aaaUsage|
 ==============================================================================
 
+==============================================================================
+1. Supported Alternates                               *aaaSupportedAlternates*
+
+    ruby:
+	app/file.rb           => spec/file_spec.rb
+	lib/file.rb           => spec/lib/file_spec.rb
+	features/file.feature => features/step_definitions/file_steps.feature
+    go:
+	file.go               => file_test.go
 
 ==============================================================================
-1. General Commands	   	                                   *aaaCommands*
+
+==============================================================================
+2. General Commands	   	                                 *aaaCommands*
 
 :A <how>                       *:A*
 	Switch to the alternate file. Optionally specify split or vsplit
-	to open in a split. A! will create the file if it doesn't exist.
+	to open in a split. :A! will create the file if it doesn't exist.
 ==============================================================================
 
 ==============================================================================
-2. Usage	   	                                            *aaaUsage*
+3. Usage	   	                                            *aaaUsage*
 
 	Map something to Alternate. For example ":command A :Alternate" will
 	map :A to :Alternate. Add this to your vimrc. If you want a split or
